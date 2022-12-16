@@ -1,0 +1,92 @@
+@using DeltaTEngine
+@* adicionar la opcion de pasarlos de uno en uno, la opcion de eliminarlos y shortearlos por similitud *@
+
+@if(!ContactDisplay)
+@foreach(var item in Bridge.PageInfo.PosibleMatches)
+{
+    <div class="contact" @onclick="()=>Access(item)">
+        <div>
+            <p>@item.name</p>
+            <p>Edad: @item.age</p>
+        </div>
+        <div>
+            <p>@item.From</p>
+            <p>@item.sex</p>
+        </div>
+    </div>
+}
+@if(ContactDisplay)
+{
+    <div class="displayContact">
+        <div>
+            <h1>
+                @ToRead.name
+            </h1>
+        </div>
+                
+        <div class="Inf">
+            <div>Edad: @ToRead.age</div>
+            <div>@ToRead.sex</div>
+            <div>@ToRead.From</div>
+        </div>
+        <div>
+            <h1>Descripcion</h1>
+            <div class="Description">
+                <div>
+                    <p>@ToRead.info</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Busca a:</h1>
+            <div class="Description">
+                <div>
+                    <p>@ToRead.lookingFor</p>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; justify-content:center;">
+            @if(!Bridge.PageInfo.Matches.Select(a=>a.name).Contains(ToRead.name))
+            {
+                <button @onclick="()=>Match(ToRead)">🤍</button>
+            }
+            @if(Bridge.PageInfo.Matches.Select(a=>a.name).Contains(ToRead.name))
+            {
+                <button @onclick="()=>UnMatch(ToRead)">🗑</button>
+            }
+            <button @onclick="()=>{ContactDisplay=false;Bridge.PageInfo.Actualize();}">Volver</button>
+        </div>
+    </div>
+}
+
+@code
+{
+    bool ContactDisplay;
+    user ToRead=Bridge.PageInfo.owner;
+    void Access(user item)
+    {
+        Bridge.PageInfo.Actualize();
+        ToRead=Bridge.PageInfo.LookProfile(item.name);
+        ContactDisplay=ToRead is not null;
+    }
+    void Match(user item)
+    {
+        Bridge.PageInfo.Actualize();
+        Bridge.PageInfo.Match(item.name);
+        if(!Bridge.PageInfo.PosibleMatches.Contains(item))
+        {
+            ContactDisplay=true;
+            return;
+        }
+    }
+    void UnMatch(user item)
+    {
+        Bridge.PageInfo.Actualize();
+        Bridge.PageInfo.UnMatch(item.name);
+        if(!Bridge.PageInfo.PosibleMatches.Contains(item))
+        {
+            ContactDisplay=true;
+            return;
+        }
+    }
+}

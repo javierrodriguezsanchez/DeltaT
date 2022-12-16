@@ -1,0 +1,142 @@
+@using DeltaTEngine
+
+
+<div id="Create">
+
+@if(Bridge.PageInfo is null)
+{
+    <label>
+        <p>Nombre:</p>
+        <input type="text" @bind-value="name" @bind-value:event="oninput" placeholder="ponga su nombre">
+    </label>
+    @if (!IsNameOk)
+    {
+        <p class="error">❗nombre incorrecto</p>
+    }
+    <label>
+        <p>Contraseña:</p>
+        <input type="password" @bind-value="password" @bind-value:event="oninput">
+    </label>
+    <label>
+        <p>Confirmar:</p>
+        <input type="password" @bind-value="CheckPassword" @bind-value:event="oninput">
+    </label>
+    @if (CheckPassword!=password)
+    {
+        <p class="error">❗no coincide</p>
+    }
+
+    <label>
+        <p>Edad:</p>
+        <input type="number" width="50px" min="0" max="100" @bind-value="age" @bind-value:event="oninput">
+    </label>
+    
+    <label>
+        <p>Vive en:</p>
+        <select @bind-value="From" @bind-value:event="oninput">
+            <option>Plaza</option>
+            <option>Playa</option>
+            <option>Habana Vieja</option>
+            <option>Centro Habana</option>
+            <option>Habana del Este</option>
+            <option>10 de Octubre</option>
+            <option>San Miguel</option>
+            <option>Arroyo Naranjo</option>
+            <option>Cotorro</option>
+            <option>Cerro</option>
+            <option>Regla</option>
+            <option>Boyeros</option>
+            <option>Marianao</option>
+            <option>La Lisa</option>
+            <option>Guanabacoa</option>
+            <option>Otra provincia</option>
+        </select>
+    </label>
+
+    <label>
+        <p>Sexo:</p>
+        <select @bind-value="sex" @bind-value:event="oninput">
+            <option>Mujer</option>
+            <option>Hombre</option>
+            <option>Otro</option>
+        </select>
+    </label>
+    
+    <label>
+        <p>Busca:</p>
+        <select @bind-value="likes" @bind-value:event="oninput">
+            <option>Mujer</option>
+            <option>Hombre</option>
+            <option>Otro</option>
+            <option>Hombre y mujer</option>
+            <option>No hombre</option>
+            <option>No mujer</option>
+            <option>No especificar</option>
+        </select>
+    </label>
+
+    <p>Describase</p>
+    <label style="margin-top: 0%;">
+        <textarea type="text" rows="3" @bind-value="Description" @bind-value:event="oninput"></textarea>
+    </label>
+    
+    <p>Describa lo que busca</p>
+    <label style="margin-top: 0%;">
+        <textarea type="text" rows="3" @bind-value="LookingForDescription" @bind-value:event="oninput"></textarea>
+    </label>
+
+    <button @onclick="Entry">Comprobar</button>
+    
+}
+    @if(Bridge.PageInfo is not null)
+    {
+        <div>
+            <h1>
+                Bienvenid@(sex=="Mujer"?"a":(sex=="Hombre"?"o":"e")) @name        
+            </h1>
+        </div>
+        <NavLink href="sesion">
+            <button>Acceder</button>
+        </NavLink>
+    }
+</div>
+
+@code
+{
+    string name="";
+    string password="";
+    string CheckPassword="";
+    bool IsNameOk=true;
+    int age=18;
+    string From="Plaza";
+    string sex="Mujer";
+    string likes="Mujer";
+    string Description="";
+    string LookingForDescription="";
+    void Entry()
+    {
+        if(password!=CheckPassword)return;
+        
+        foreach (var item in Bridge.AllUsers())
+        {
+            if(Path.GetFileNameWithoutExtension(item)==name)
+            {
+                IsNameOk=false;
+                return;
+            }
+        }
+
+        Bridge.PageInfo=new(new(name,password,age,From,sex,GetLikes(),Description,LookingForDescription));
+    }
+    string[] GetLikes()
+    {
+        switch(likes)
+        {
+            case "Hombre y mujer": return new string[]{"Hombre","Mujer"};
+            case "No mujer": return new string[]{"Hombre","Otro"};
+            case "No hombre": return new string[]{"Otro","Mujer"};
+            case "No especificar": return new string[]{"Hombre","Mujer","Otro"};
+            default: return new string[]{likes};
+        }
+    }
+}

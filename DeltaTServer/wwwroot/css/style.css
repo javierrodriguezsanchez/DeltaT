@@ -1,0 +1,291 @@
+body{
+    background:-moz-linear-gradient(left, rgb(170, 50, 50),rgb(255, 100, 124),rgb(170, 50, 50));
+    padding: 0%;
+}
+
+header{
+    background:-moz-linear-gradient(rgb(255, 90, 90), rgb(150, 20, 40),rgb(255, 90, 90));
+    color: white;
+    text-align: center;
+    margin: 0%;
+    padding: 10px 0px;
+    border: solid white 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+header h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+button{
+    display: block;
+    color: white;
+    background:-moz-linear-gradient(rgb(255, 90, 90), rgb(150, 20, 40),rgb(255, 90, 90));
+    font-size: 30px;
+    margin-top: 50px ;
+    width: 230px;
+    border: solid white;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+main>div{
+    display: flex;
+    justify-content: center;
+}
+
+#Access{
+    display: block;
+    text-align: center;
+    font-size: 120%;
+}
+#Access>input{
+    width: 200px;
+}
+#Access>p{
+    margin-top: 2%;
+}
+#Access div{
+    display: flex;
+    justify-content: center;
+}
+
+#Access button{
+    width: 150px;
+    font-size: 130%;
+}
+
+.error{
+    margin: 0%;
+    font-size: 50%;
+    color: red;
+}
+
+#Create{
+    display:flex;
+    flex-direction: column;
+    font-size: 120%;   
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+#Create button{
+    width: 150px;
+    font-size: 130%;
+}
+
+#Create>label{
+    display:block;
+    margin: 0.5% 0%;
+    width: 280px;
+}
+#Create>label>p{
+    float: left;
+}
+
+#Create>label>input{
+    float: right;
+    width: 170px;
+}
+
+#Create>label>select{
+    float: right;
+}
+
+nav{
+    display: flex;
+    box-shadow: 0px 1px 5px black;
+    padding-top: 10px;
+}
+nav div{
+    flex: 1;
+    color: white;
+    font-size: 180%;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+.contact
+{
+    margin: 1%;
+    border: solid 6px white;
+    border-radius: 10px;
+    font-size: 130%;
+    padding-left: 10%;
+    padding-top: 2%;
+    background:-moz-linear-gradient(rgb(255, 80, 80), rgb(150, 20, 40),rgb(255, 80, 80));
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.displayContact
+{
+    display: block;
+    font-size: 150%;
+    color: white;
+    text-align: center;
+    margin: 5% 2%;
+}
+.displayContact div
+{
+    margin-top: 2%;
+    flex: 1;
+    text-align: center;
+}
+
+.Inf
+{
+    border: solid white 2px;
+    border-radius: 10px;
+    display: flex;
+}
+.Description
+{
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-align: justify;
+    justify-self: center;
+    border-color: 3px black;
+}
+.Description div
+{
+    background-color: white;
+    width: 80%;
+    height: 400%;
+    overflow-y: scroll;
+}
+
+#Configuration>div
+{
+    margin: 1%;
+    border: solid 6px white;
+    border-radius: 10px;
+    font-size: 200%;
+    padding-left: 10%;
+    padding-top: 2%;
+    background:-moz-linear-gradient(rgb(255, 80, 80), rgb(150, 20, 40),rgb(255, 80, 80));
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#Configuration article
+{
+    display: flex;
+    justify-content: center;
+}
+
+#Refresh{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 15%;
+}
+
+.AllTheChats
+{
+    margin: 1%;
+    border: solid 6px white;
+    border-radius: 10px;
+    font-size: 200%;
+    padding-top: 2%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#Head
+{
+    display: flex;
+    color: white;
+    box-shadow: 0px 1px 5px black;
+}
+#Head button
+{
+    width: 10%;
+    margin: 2%;
+}
+#Head div
+{
+    flex: 1;
+    text-align: center;
+    padding-top: 20px;
+    margin-right: 50px;
+}
+#Conversation
+{
+    min-height: 20%;
+    overflow-y: scroll;
+    max-height: 20%;
+}
+#Conversation div
+{
+    color:white;
+    font-size: 120%;
+    text-align: center;
+    margin-bottom: black solid 20px;
+}
+
+.send
+{
+    display:flex;
+    justify-content: end;
+    padding-right: 3%;
+}
+.send div
+{
+    display: block;
+    color: white;
+    background:rgb(211, 21, 50);
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 2% 4%;
+    border: solid white;
+    border-radius: 10px;
+    justify-self: center;
+    max-width: 70%;
+}
+.recieved div
+{
+    margin-left: 3%;
+    display: block;
+    background:white;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 2% 4%;
+    border: solid rgb(113, 14, 29);
+    border-radius: 10px;
+    justify-self: center;
+    max-width: 70%;
+}
+.recieved p
+{
+    
+    color: rgb(211, 21, 50);
+}
+
+#Write
+{
+    display: flex;
+    font-size: 120%;
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+}
+#Write input
+{
+    width: 80%;
+    margin: 2%;
+}
+#Write button
+{
+    margin: 1%;
+    width: 50px;
+    font-size: 25px;
+}

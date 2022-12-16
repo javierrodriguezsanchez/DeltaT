@@ -1,0 +1,53 @@
+@using DeltaTEngine
+@* queda: Terminar la configuracion del perfil pendiente, agregar preferencias, agregar pestana de bloqueados y macheados *@
+
+<div id="Configuration">
+    <div @onclick="()=>MP=!MP">
+        Modificar Perfil
+    </div>
+    @if(MP && !CorrectPassword)
+    {
+        <article><h1>Introduzca contraseña</h1></article>
+        <article><input type="password" @bind-value="TryPassword" @bind-value:event="oninput"></article>
+        @if(!PswrdCorrect)
+        {
+            <article><p class="error">❗contraseña incorrecta</p></article>
+        }
+        <article><button @onclick="Enviar">Enviar</button></article>
+    }
+    @if(MP && CorrectPassword)
+    {
+        @*CONFIGURAR AQUI*@
+        <div>Parte en desarrollo</div>
+    }
+    <div  @onclick="()=>CS=!CS">
+        Cerrar Sesion
+    </div>
+    @if(CS)
+    {
+        <article>
+            <NavLink href="/">
+                <button>Cerrar</button>
+            </NavLink>
+        </article>
+    }
+</div>
+
+@code
+{
+    bool CorrectPassword=false;
+    bool MP=false;
+    bool CS=false;
+    bool PswrdCorrect=true;
+    string TryPassword="";
+
+    void Enviar()
+    {
+        PswrdCorrect=Bridge.PageInfo.owner.CheckPassword("");
+        if(!PswrdCorrect)
+        {
+            CorrectPassword=true;
+            return;
+        }
+    }
+}

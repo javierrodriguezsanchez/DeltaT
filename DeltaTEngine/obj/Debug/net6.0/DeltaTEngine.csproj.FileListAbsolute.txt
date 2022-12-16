@@ -1,0 +1,12 @@
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\bin\Debug\net6.0\DeltaTEngine.deps.json
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\bin\Debug\net6.0\DeltaTEngine.dll
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\bin\Debug\net6.0\DeltaTEngine.pdb
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\DeltaTEngine.csproj.AssemblyReference.cache
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\DeltaTEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\DeltaTEngine.AssemblyInfoInputs.cache
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\DeltaTEngine.AssemblyInfo.cs
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\DeltaTEngine.csproj.CoreCompileInputs.cache
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\DeltaTEngine.dll
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\refint\DeltaTEngine.dll
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\DeltaTEngine.pdb
+C:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTEngine\obj\Debug\net6.0\ref\DeltaTEngine.dll

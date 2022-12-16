@@ -1,0 +1,69 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DeltaTServer
+build_property.RootNamespace = DeltaTServer
+build_property.ProjectDir = c:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTServer\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\Javier\Desktop\deltaT\DeltaT\DeltaTServer
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Components/Access.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xBY2Nlc3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Components/Chats.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDaGF0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Components/Configuration.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDb25maWd1cmF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Components/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Components/People.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xQZW9wbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Sesion.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VzaW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-s6ww52ut9y
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Javier/Desktop/deltaT/DeltaT/DeltaTServer/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

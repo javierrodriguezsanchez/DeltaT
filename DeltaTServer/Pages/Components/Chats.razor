@@ -1,0 +1,96 @@
+@using DeltaTEngine
+
+@if(AllUsers && Bridge.PageInfo.chats.Count>0)
+{
+    @foreach (var item in Bridge.PageInfo.chats.OrderByDescending(a=>a.Any()?a.FirstOrDefault().Item1.moment:a.timeCreated))
+    {
+        <div class="AllTheChats" @onclick="()=>Open(item)">
+            <h2>@item.contact.name</h2>
+            @if(item.Any())
+            {
+                <p>@item.LastOrDefault().Item1.text</p>
+            }
+        </div>
+    }
+}
+
+@if(!AllUsers)
+{
+    <div id="Head">
+        <button @onclick="()=>{AllUsers=true;Bridge.PageInfo.Actualize();}">↩</button>
+        <div>
+            <h1>@k.contact.name</h1>
+        </div>
+    </div>
+    <div id="Conversation">
+        <div @onclick="()=>toda=!toda">
+            @if(!toda)
+            {
+                <p>⇑ Leer toda la conversacion ⇑</p>
+            }
+            @if(toda)
+            {
+                <p>ocultar</p>
+            }
+        </div>
+        @if(!toda)
+        {
+            @foreach (var item in k.Take(10).Reverse())
+            {
+                <div class=@(item.Item2?"send":"recieved")>
+                    <p>@item.Item1.text</p>
+                </div>
+            }
+        }
+        @if(toda)
+        {
+            @foreach (var item in k.Reverse())
+            {
+                <div class=@(item.Item2?"send":"recieved")>
+                    <div>
+                        <p>@item.Item1.text</p>
+                    </div>
+                </div>
+            }
+        }
+        
+                <div class="recieved">
+                    <div>
+                        <p>Hola</p>
+                    </div>
+                </div>
+                
+                <div class="send">
+                    <div>
+                        <p>Muy buenas. Que tal estas?</p>
+                    </div>
+                </div>
+    </div>
+    <div id="Write">
+        <input type="text" @bind-value="text" @bind-value:event="oninput">
+        <button @onclick="SendMessege">⇛</button>
+    </div>
+}
+
+@code
+{
+    string text="";
+    bool toda=false;
+    bool AllUsers=true;
+    conversation k=null!;
+    void Open(conversation item)
+    {
+        Bridge.PageInfo.Actualize();
+        if(!Bridge.PageInfo.chats.Contains(item))
+        {
+            return;
+        }
+        AllUsers=false;
+        k=item;
+    }
+
+    void SendMessege()
+    {
+        AllUsers=!Bridge.PageInfo.SendMessege(k.contact.name,text);
+    }
+}

@@ -1,0 +1,60 @@
+@using DeltaTEngine
+<div id="Access">
+@if(Bridge.PageInfo is null)
+{
+    <p>Nombre de usuario</p>
+    <input type="text" @bind-value="name" @bind-value:event="oninput" placeholder="ponga su nombre">
+    @if (!IsNameOk)
+    {
+        <p class="error">❗nombre incorrecto</p>
+    }
+    <p>Contraseña</p>
+    <label><input type="password" @bind-value="password" @bind-value:event="oninput"></label>
+    @if (!IsPasswordOk)
+    {
+        <p class="error">❗contraseña incorrecta</p>
+    }
+    <div>
+        <button @onclick="Entry">Comprobar</button>
+    </div>
+}
+        @if(Bridge.PageInfo is not null)
+        {
+            <NavLink href="sesion">
+                <div>
+                    <button>Acceder</button>
+                </div>
+            </NavLink>
+        }
+</div>
+
+@code
+{
+    string name="";
+    string password="";
+    bool IsNameOk=true;
+    bool IsPasswordOk=true;
+    void Entry()
+    {
+        foreach(var names in Bridge.AllUsers())
+        {
+            if(Path.GetFileNameWithoutExtension(names)==name)
+            {
+                StreamReader reader=new(names);
+                user ThePossibleUser=user.Parse(reader.ReadToEnd());
+                reader.Close();
+                if(ThePossibleUser.CheckPassword(password))
+                {
+                    Bridge.PageInfo=new(ThePossibleUser);
+                    return;
+                }
+                else
+                {
+                    IsPasswordOk=false;
+                    return;
+                }
+            }
+        }
+        IsNameOk=false;
+    }
+}

@@ -1,0 +1,125 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTServer\\DeltaTServer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTEngine\\DeltaTEngine.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTEngine\\DeltaTEngine.csproj",
+        "projectName": "DeltaTEngine",
+        "projectPath": "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTEngine\\DeltaTEngine.csproj",
+        "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTEngine\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTServer\\DeltaTServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTServer\\DeltaTServer.csproj",
+        "projectName": "DeltaTServer",
+        "projectPath": "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTServer\\DeltaTServer.csproj",
+        "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTEngine\\DeltaTEngine.csproj": {
+                "projectPath": "C:\\Users\\Javier\\Desktop\\deltaT\\DeltaT\\DeltaTEngine\\DeltaTEngine.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

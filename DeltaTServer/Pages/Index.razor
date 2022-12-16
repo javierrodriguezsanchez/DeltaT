@@ -1,0 +1,37 @@
+﻿@page "/"
+@using DeltaTServer.Pages.Components
+@using DeltaTEngine
+<PageTitle>Index</PageTitle>
+
+<main>
+    <div><button  @onclick=@(()=>Act(1))>Unirse</button></div>
+    @if(cuestionary)
+    {
+        <Create></Create>
+    }
+    <div><button @onclick=@(()=>Act(2))>Iniciar sesión</button></div>
+    @if(remember)
+    {
+        <Access></Access>
+    }
+    <div><button @onclick=@(()=>Act(3))>Información</button></div>
+    @if(info)
+    {
+        <p>ccc</p>
+    }
+    </main>
+
+
+@code{
+    bool cuestionary=false;
+    bool remember=false;
+    bool info=false;
+
+    void Act(int a)
+    {
+        Bridge.PageInfo=null!;
+        cuestionary=!cuestionary && a==1;
+        remember=!remember && a==2;
+        info=!info && a==3;
+    }
+}

@@ -1,0 +1,37 @@
+@page "/sesion"
+@using DeltaTServer.Pages.Components
+@using DeltaTEngine
+
+<nav>
+    <div  style="@SubLine(1)" @onclick=@(()=>num=1)>
+        <p>
+            Personas
+        </p>
+    </div>
+    <div style="@SubLine(2)" @onclick=@(()=>num=2)>
+        <p>
+            Chats
+        </p>
+    </div>
+    <div style="@SubLine(3)" @onclick=@(()=>num=3)>
+        <p>
+            ⚙
+        </p>
+    </div>    
+</nav>
+
+@if(num==1){<People></People>}
+@if(num==2){<Chats></Chats>}
+@if(num==3){<Configuration></Configuration>}
+
+<button id="Refresh" @onclick="Bridge.PageInfo.Actualize">↻</button>
+@code{
+    int num=1;
+    string SubLine(int number)
+    {
+        if(number==num)
+            return "border-bottom: solid white 5px;";
+        return "";
+    }
+
+}
